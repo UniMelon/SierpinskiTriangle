@@ -1,5 +1,5 @@
 from turtle import *
-import random
+from random import randint, choice
 
 speed(0)
 setup(500,500) # window size
@@ -12,16 +12,13 @@ goto(0,150) # A
 goto(-200,-150)
 hideturtle()
 
-dotX = random.randint(-80, 80) # circumference of the first point
-dotY = random.randint(-80, 80)
-
 penup()
-goto(dotX, dotY)
+goto(randint(-80, 80), randint(-80, 80))
 a = pos()
 dot(5)
 
 while True:
-    ch = random.choice([1,2,3])
+    ch = choice([1,2,3])
     if ch == 1: # point will move a half distance to A 
         goto(0,150)
         b = pos()
